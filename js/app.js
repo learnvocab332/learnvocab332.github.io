@@ -59,19 +59,7 @@ class Statistics {
 
     addVisit(url, title) {
         try {
-            // Check if we already have a visit with the same URL currently in progress
-            const existingVisit = this.stats.visits.find(v => 
-                v.url === url && v.endTime === undefined
-            );
-            
-            if (existingVisit) {
-                // Update existing visit instead of creating a new one
-                existingVisit.count = (existingVisit.count || 1) + 1;
-                existingVisit.lastVisitTime = Date.now();
-                this.saveStats();
-                return;
-            }
-            
+            // Always create a new visit entry with the current timestamp
             const visit = {
                 url,
                 title,
@@ -80,8 +68,22 @@ class Statistics {
                 startTime: Date.now(),
                 count: 1
             };
+            
+            // Add new visit to the beginning of the array
             this.stats.visits.unshift(visit);
             this.stats.lastVisit = visit.timestamp;
+            
+            // Update the previous visit's duration if it exists for the same URL
+            const previousVisits = this.stats.visits.filter((v, index) => index > 0 && v.url === url);
+            if (previousVisits.length > 0) {
+                const prevVisit = previousVisits[0];
+                if (!prevVisit.endTime) {
+                    const duration = Math.floor((Date.now() - prevVisit.startTime) / 1000);
+                    prevVisit.duration = this.formatTime(duration);
+                    prevVisit.endTime = Date.now();
+                }
+            }
+            
             this.saveStats();
             this.updateVisitHistory();
         } catch (error) {
@@ -244,18 +246,19 @@ class VisitedLinks {
 
     markAsVisited(url) {
         try {
-            // If it was already visited before, we're incrementing the visit count
-            const wasVisitedBefore = this.isVisited(url);
-            
-            this.visited[url] = true;
-            this.saveVisited();
-            this.updateSwitch(url, true);
-            
-            // Add visit to statistics
+            // Always record a new visit in statistics
             const card = document.querySelector(`.quiz-card[data-url="${url}"]`);
             if (card) {
                 const title = card.querySelector('h2').textContent;
+                // Always add a visit regardless of previous visits
                 this.statistics.addVisit(url, title);
+            }
+            
+            // Only update the visited status if not already visited
+            if (!this.isVisited(url)) {
+                this.visited[url] = true;
+                this.saveVisited();
+                this.updateSwitch(url, true);
             }
         } catch (error) {
             console.error('Error marking as visited:', error);
@@ -315,8 +318,12 @@ class VisitedLinks {
         const quizCards = document.querySelectorAll('.quiz-card');
         quizCards.forEach(card => {
             card.addEventListener('click', (e) => {
+                // Prevent triggering if the click was on the switch
+                if (e.target.closest('.switch') || e.target.classList.contains('visit-switch')) {
+                    return;
+                }
+                
                 const url = card.dataset.url;
-                const switchInput = card.querySelector('.visit-switch');
 
                 // Open confirmation modal
                 const modal = document.getElementById('confirmModal');
@@ -332,7 +339,10 @@ class VisitedLinks {
                     if (confirmed) {
                         // Mark as visited and open link
                         this.markAsVisited(url);
-                        window.open(url, '_blank');
+                        // Use setTimeout to ensure the visit is recorded before navigating
+                        setTimeout(() => {
+                            window.open(url, '_blank');
+                        }, 100);
                     }
                 };
 
@@ -405,6 +415,29 @@ let currentQuizUrl = null;
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     const visitedLinks = new VisitedLinks();
+    
+    // Debug function to verify statistics are working correctly
+    window.debugStatistics = function() {
+        try {
+            const stats = JSON.parse(localStorage.getItem(Statistics.STORAGE_KEY));
+            console.log('Current Statistics:', stats);
+            if (stats && stats.visits) {
+                console.log('Total Visits:', stats.visits.length);
+                console.log('Visit Details:', stats.visits);
+                
+                // Group by URL to see visit counts
+                const visitsByUrl = {};
+                stats.visits.forEach(visit => {
+                    visitsByUrl[visit.url] = (visitsByUrl[visit.url] || 0) + 1;
+                });
+                console.log('Visits by URL:', visitsByUrl);
+            }
+            return stats;
+        } catch (error) {
+            console.error('Error debugging statistics:', error);
+            return null;
+        }
+    };
 });
 
 // Service Worker Registration

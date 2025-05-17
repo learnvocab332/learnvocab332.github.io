@@ -43,9 +43,11 @@ class StatisticsPage {
                 urlToTitleMap[visit.url] = visit.title;
             }
             
+            // Add all visits to the array with timestamps
             visitCounts[visit.url].push({
                 timestamp: visit.timestamp,
-                duration: visit.duration || '0s'
+                duration: visit.duration || '0s',
+                endTime: visit.endTime
             });
         });
         
@@ -53,7 +55,8 @@ class StatisticsPage {
         return Object.keys(visitCounts).map(url => ({
             url,
             title: urlToTitleMap[url] || 'Unknown Title',
-            visits: visitCounts[url].sort((a, b) => b.timestamp - a.timestamp) // Sort by most recent first
+            visits: visitCounts[url].sort((a, b) => b.timestamp - a.timestamp), // Sort by most recent first
+            visitCount: visitCounts[url].length // Add a count of total visits
         }));
     }
 
@@ -202,6 +205,7 @@ class StatisticsPage {
                 const headerHtml = `
                     <div class="quiz-header">
                         <h2>${title}</h2>
+                        <div class="visit-count-badge">${item.visitCount} visits</div>
                     </div>
                 `;
                 
@@ -211,9 +215,8 @@ class StatisticsPage {
                 item.visits.forEach((visit, index) => {
                     tagsHtml += `
                     <div class="quiz-tags">
-                        <span class="tag">${index + 1}</span>
+                        <span class="tag">Visit ${index + 1}</span>
                         <span class="tag">${this.formatDate(visit.timestamp)}</span>
-                        ${visit.duration ? `<span class="tag">Duration: ${visit.duration}</span>` : ''}
                     </div>
                     `;
                 });
