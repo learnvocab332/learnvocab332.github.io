@@ -215,7 +215,7 @@ class StatisticsPage {
                 item.visits.forEach((visit, index) => {
                     tagsHtml += `
                     <div class="quiz-tags">
-                        <span class="tag">Visit ${index + 1}</span>
+                        <span class="tag">Visit ${item.visits.length - index}</span>
                         <span class="tag">${this.formatDate(visit.timestamp)}</span>
                     </div>
                     `;
