@@ -7,9 +7,15 @@ const quizData = [
         description: 'One word at a time, one step closer to fluency.',
     },
     {
-        id: 'quiz1',
+        id: 'quiz2',
         url: 'https://quizizz.com/join?gc=05773812',
         title: 'Week 3',
+        description: 'The limits of my language mean the limits of my world.',
+    },
+    {
+        id: 'quiz3',
+        url: 'https://quizizz.com/join?gc=05773812',
+        title: 'Week 4',
         description: 'The limits of my language mean the limits of my world.',
     }
 ];
