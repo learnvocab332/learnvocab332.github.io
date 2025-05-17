@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A332 - Học từ vựng ✍</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#17c245" />
+    <!-- materialize icons, css & js -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="/css/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <!--For IOS-->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/img/icons/icon-128x128.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/img/icons/icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/icons/icon-192x192.png"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container nav-flex">
+          <h1 class="link-navbar-title">
+            <a href="/index.html">Review vocabulary ✍</a>
+          </h1>
+          <a href="/pages/statistics.html" class="nav-button">Statistics</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="quiz-grid" id="quizGrid">
+        <!-- Quiz cards will be generated dynamically with JavaScript -->
+      </div>
+    </main>
+
+    <!-- Quiz Modal -->
+    <div id="confirmModal" class="modal">
+      <div class="modal-content">
+        <h2>Ready to Learn?</h2>
+        <p>Do you want to start this learning journey?</p>
+        <div class="modal-buttons">
+          <button id="confirmYes" class="btn btn-primary">
+            Yes, Let's Go!
+          </button>
+          <button id="confirmNo" class="btn btn-secondary">Not Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load data first -->
+    <script src="/js/data.js"></script>
+    <!-- Then app.js which will use the data -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>
