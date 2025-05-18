@@ -19,11 +19,10 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
-  touch-action: none;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
 
 .container {

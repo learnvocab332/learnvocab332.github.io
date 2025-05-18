@@ -11,7 +11,32 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=05773812',
         title: 'Week 3',
         description: 'The limits of my language mean the limits of my world.',
-    }
+    },  
+    {
+        id: 'quiz3',
+        url: 'https://quizizz.com/join?gc=16757108',
+        title: 'Week 4',
+        description: 'One word at a time, one step closer to fluency.',
+    },
+    {
+        id: 'quiz4',
+        url: 'https://quizizz.com/join?gc=16757108',
+        title: 'Week 5',
+        description: 'One word at a time, one step closer to fluency.',
+    },
+    {
+        id: 'quiz5',
+        url: 'https://quizizz.com/join?gc=16757108',
+        title: 'Week 6',
+        description: 'One word at a time, one step closer to fluency.',
+    },
+    {
+        id: 'quiz6',
+        url: 'https://quizizz.com/join?gc=16757108',
+        title: 'Week 7',
+        description: 'One word at a time, one step closer to fluency.',
+    },
+
 ];
 
 // Function to get all quiz data
