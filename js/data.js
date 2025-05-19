@@ -11,6 +11,12 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=05773812',
         title: 'Week 1-3',
         description: 'The limits of my language mean the limits of my world.',
+    },
+    {
+        id: 'quiz3',
+        url: 'https://quizizz.com/join?gc=32524812',
+        title: 'Week 2-1',
+        description:'What I cannot express, I cannot fully grasp',
     }
 ];
 
