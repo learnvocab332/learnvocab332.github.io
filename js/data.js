@@ -17,6 +17,12 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=32524812',
         title: 'Week 2-1',
         description:'What I cannot express, I cannot fully grasp',
+    },
+    {
+        id: 'quiz4',
+        url: 'https://quizizz.com/join?gc=31747212',
+        title: 'Week 2-1',
+        description:'Language is the map; without it, I wander blind.',
     }
 ];
 
