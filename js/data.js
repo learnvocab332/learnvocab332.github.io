@@ -24,6 +24,13 @@ const quizData = [
         title: 'Week 2-1',
         description:'Language is the map; without it, I wander blind.',
     }
+    ,
+    {
+        id: 'quiz5',
+        url: 'https://quizizz.com/join?gc=00020364',
+        title: 'Week 2-1',
+        description:'Language is the map; without it, I wander blind.',
+    }
 ];
 
 // Function to get all quiz data
