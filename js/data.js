@@ -21,14 +21,19 @@ const quizData = [
     {
         id: 'quiz4',
         url: 'https://quizizz.com/join?gc=31747212',
-        title: 'Week 2-1',
+        title: 'Week 2-2',
         description:'Language is the map; without it, I wander blind.',
-    }
-    ,
+    },
     {
         id: 'quiz5',
         url: 'https://quizizz.com/join?gc=00020364',
-        title: 'Week 2-1',
+        title: 'Week 2-3',
+        description:'Language is the map; without it, I wander blind.',
+    },
+    {
+        id: 'quiz6',
+        url: 'https://quizizz.com/join?gc=49796684',
+        title: 'Week 3-1',
         description:'Language is the map; without it, I wander blind.',
     }
 ];
