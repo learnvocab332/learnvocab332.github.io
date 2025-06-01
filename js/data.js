@@ -35,6 +35,18 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=49796684',
         title: 'Week 3-1',
         description:'Language is the map; without it, I wander blind.',
+    },
+    {
+        id: 'quiz7',
+        url: 'https://quizizz.com/join?gc=21004492',
+        title: 'Week 3-2',
+        description:'Language is the map; without it, I wander blind.',
+    },
+    {
+        id: 'quiz8',
+        url: 'https://quizizz.com/join?gc=15517748',
+        title: 'Week 3-3',
+        description:'Have a nice weekend and see you all next Monday💕👌🌷🪷🌸🌼🌻🪻🌹🌞🌱🍄🍁',
     }
 ];
 
