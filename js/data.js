@@ -47,7 +47,13 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=15517748',
         title: 'Week 3-3',
         description:'Have a nice weekend and see you all next Monday💕👌🌷🪷🌸🌼🌻🪻🌹🌞🌱🍄🍁',
-    }
+    },
+    {
+        id: 'quiz9',
+        url: 'https://quizizz.com/join?gc=46170420',
+        title: 'Week 4-1',
+        description:'PHÂN BỔ THỜI GIAN KHOA HỌC VÀ HỢP LÝ ĐỂ VIỆC HỌC ĐƯỢC HIỆU QUẢ NHẤT, CÁC BẠN NHÉ 💖👌😍😘😎 😎😎💕💕',
+    }   
 ];
 
 // Function to get all quiz data
