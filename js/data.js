@@ -53,7 +53,13 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=46170420',
         title: 'Week 4-1',
         description:'PHÂN BỔ THỜI GIAN KHOA HỌC VÀ HỢP LÝ ĐỂ VIỆC HỌC ĐƯỢC HIỆU QUẢ NHẤT, CÁC BẠN NHÉ 💖👌😍😘😎 😎😎💕💕',
-    }   
+    },
+    {
+        id: 'quiz12',
+        url: 'https://quizizz.com/join?gc=23239084',
+        title: 'Week 5-1',
+        description:'PHÂN BỔ THỜI GIAN KHOA HỌC VÀ HỢP LÝ ĐỂ VIỆC HỌC ĐƯỢC HIỆU QUẢ NHẤT 💖👌😍😘😎 😎😎💕💕',
+    }      
 ];
 
 // Function to get all quiz data
