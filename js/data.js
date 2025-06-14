@@ -59,6 +59,12 @@ const quizData = [
         url: 'https://quizizz.com/join?gc=23239084',
         title: 'Week 5-1',
         description:'PHÂN BỔ THỜI GIAN KHOA HỌC VÀ HỢP LÝ ĐỂ VIỆC HỌC ĐƯỢC HIỆU QUẢ NHẤT 💖👌😍😘😎 😎😎💕💕',
+    } ,
+    {
+        id: 'quiz13',
+        url: 'https://quizizz.com/join?gc=14289260',
+        title: 'Week 5-3',
+        description:'The more you practice, the better you are💕😘😎💕👌',
     }      
 ];
 
