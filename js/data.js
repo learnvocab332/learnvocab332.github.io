@@ -3,69 +3,9 @@ const quizData = [
     {
         id: 'quiz1',
         url: 'https://quizizz.com/join?gc=16757108',
-        title: 'Week 1-2',
+        title: 'Week 1',
         description: 'One word at a time, one step closer to fluency.',
-    },
-    {
-        id: 'quiz2',
-        url: 'https://quizizz.com/join?gc=05773812',
-        title: 'Week 1-3',
-        description: 'The limits of my language mean the limits of my world.',
-    },
-    {
-        id: 'quiz3',
-        url: 'https://quizizz.com/join?gc=32524812',
-        title: 'Week 2-1',
-        description:'What I cannot express, I cannot fully grasp',
-    },
-    {
-        id: 'quiz4',
-        url: 'https://quizizz.com/join?gc=31747212',
-        title: 'Week 2-2',
-        description:'Language is the map; without it, I wander blind.',
-    },
-    {
-        id: 'quiz5',
-        url: 'https://quizizz.com/join?gc=00020364',
-        title: 'Week 2-3',
-        description:'Language is the map; without it, I wander blind.',
-    },
-    {
-        id: 'quiz6',
-        url: 'https://quizizz.com/join?gc=49796684',
-        title: 'Week 3-1',
-        description:'Language is the map; without it, I wander blind.',
-    },
-    {
-        id: 'quiz7',
-        url: 'https://quizizz.com/join?gc=21004492',
-        title: 'Week 3-2',
-        description:'Language is the map; without it, I wander blind.',
-    },
-    {
-        id: 'quiz8',
-        url: 'https://quizizz.com/join?gc=15517748',
-        title: 'Week 3-3',
-        description:'Have a nice weekend and see you all next Monday💕👌🌷🪷🌸🌼🌻🪻🌹🌞🌱🍄🍁',
-    },
-    {
-        id: 'quiz9',
-        url: 'https://quizizz.com/join?gc=46170420',
-        title: 'Week 4-1',
-        description:'PHÂN BỔ THỜI GIAN KHOA HỌC VÀ HỢP LÝ ĐỂ VIỆC HỌC ĐƯỢC HIỆU QUẢ NHẤT, CÁC BẠN NHÉ 💖👌😍😘😎 😎😎💕💕',
-    },
-    {
-        id: 'quiz12',
-        url: 'https://quizizz.com/join?gc=23239084',
-        title: 'Week 5-1',
-        description:'PHÂN BỔ THỜI GIAN KHOA HỌC VÀ HỢP LÝ ĐỂ VIỆC HỌC ĐƯỢC HIỆU QUẢ NHẤT 💖👌😍😘😎 😎😎💕💕',
-    } ,
-    {
-        id: 'quiz13',
-        url: 'https://quizizz.com/join?gc=14289260',
-        title: 'Week 5-3',
-        description:'The more you practice, the better you are💕😘😎💕👌',
-    }      
+    }
 ];
 
 // Function to get all quiz data
