@@ -3,7 +3,7 @@ const quizData = [
     {
         id: 'quiz1',
         url: 'https://quizizz.com/join?gc=16757108',
-        title: 'Week 1',
+        title: 'Week 2',
         description: 'One word at a time, one step closer to fluency.',
     }
 ];
